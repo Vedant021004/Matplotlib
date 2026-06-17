@@ -23,3 +23,27 @@ y = [10,20,30,40,50]
 plt.plot(x,y,color="red",marker="o")
 plt.grid()
 plt.show()
+
+
+import matplotlib.pyplot as plt
+
+students = ["A","B","C","D"]
+marks = [80,60,90,70]
+
+plt.bar(students,marks,color="black")
+plt.scatter(students,marks)
+
+plt.grid()
+plt.show()
+
+
+import matplotlib.pyplot as plt
+
+height = [150,160,170,180]
+weight = [45,55,65,75]
+
+plt.scatter(height,weight)
+
+plt.show()
+
+
