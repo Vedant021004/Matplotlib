@@ -1,40 +1,37 @@
-import matplotlib.pyplot as plt
-import numpy as np
+import chess
 
-x = np.array([0, 1, 2, 3])
-y = np.array([3, 8, 1, 10])
+board = chess.Board()
 
-plt.subplot(2, 3, 1)
-plt.plot(x,y)
+print("\n===== CHESS BOARD =====\n")
+print(board)
 
-x = np.array([0, 1, 2, 3])
-y = np.array([10, 20, 30, 40])
+print("\n===== INFORMATION =====\n")
 
-plt.subplot(2, 3, 2)
-plt.plot(x,y)
+print("Uppercase Pieces = White")
+print("Lowercase Pieces = Black\n")
 
-x = np.array([0, 1, 2, 3])
-y = np.array([3, 8, 1, 10])
+print("White Pieces:")
+print("P = Pawn")
+print("R = Rook")
+print("N = Knight")
+print("B = Bishop")
+print("Q = Queen")
+print("K = King")
 
-plt.subplot(2, 3, 3)
-plt.plot(x,y)
+print("\nBlack Pieces:")
+print("p = Pawn")
+print("r = Rook")
+print("n = Knight")
+print("b = Bishop")
+print("q = Queen")
+print("k = King")
 
-x = np.array([0, 1, 2, 3])
-y = np.array([10, 20, 30, 40])
+print("\nBoard Coordinates:")
+print("Files (Columns): a b c d e f g h")
+print("Ranks (Rows):    1 2 3 4 5 6 7 8")
 
-plt.subplot(2, 3, 4)
-plt.plot(x,y)
+print("\nWhite starts at ranks 1 and 2")
+print("Black starts at ranks 7 and 8")
 
-x = np.array([0, 1, 2, 3])
-y = np.array([3, 8, 1, 10])
-
-plt.subplot(2, 3, 5)
-plt.plot(x,y)
-
-x = np.array([0, 1, 2, 3])
-y = np.array([10, 20, 30, 40])
-
-plt.subplot(2, 3, 6)
-plt.plot(x,y)
-
-plt.show()
+print("\nWhite moves UP the board (towards rank 8)")
+print("Black moves DOWN the board (towards rank 1)")

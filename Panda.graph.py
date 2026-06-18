@@ -10,4 +10,30 @@ plt.show()
 
 
 
+import chess
 
+board = chess.Board()
+
+while not board.is_game_over():
+
+    print("\n" + str(board))
+
+    if board.turn:
+        print("\nWhite to move")
+    else:
+        print("\nBlack to move")
+
+    move = input("Move: ")
+
+    try:
+        chess_move = chess.Move.from_uci(move)
+
+        if chess_move in board.legal_moves:
+            board.push(chess_move)
+        else:
+            print("Illegal move")
+
+    except:
+        print("Invalid move format")
+
+print("Game Over")
