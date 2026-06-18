@@ -54,13 +54,19 @@ children = [10,20,40,10,30]
 colors = ['red','blue','green','yellow','pink']
 myexplode = [0.1, 0.1, 0.1, 0.1,0.1]
 
-# plt.bar(colors,children,color='black')
+plt.bar(colors,children,color='black')
 
-# plt.show()
+plt.show()
 
 
-# plt.pie(children, labels = colors, startangle = 90)
-# plt.show()
+plt.pie(children, labels = colors, startangle = 90)
+plt.show()
 plt.pie(children, labels = colors, explode = myexplode, shadow = True)
 plt.legend(title = 'Color Data')
 plt.show()
+
+
+
+
+
+
