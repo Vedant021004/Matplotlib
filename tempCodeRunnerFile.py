@@ -1,9 +1,40 @@
-import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
-df = pd.read_csv("sharma-kohli.csv")
-plt.plot(df['index'], df['V Kohli'],color = "green",marker = 'o', label = 'virat')
-plt.plot(df['index'], df['RG Sharma'],color = "black",marker = 'o',label = 'Rohit')
-plt.grid()
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 3, 1)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 3, 2)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 3, 3)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 3, 4)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 3, 5)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 3, 6)
+plt.plot(x,y)
+
 plt.show()
-plt.legend()
