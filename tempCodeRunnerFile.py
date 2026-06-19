@@ -1,13 +1,13 @@
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
 
-df = pd.read_csv('batter.csv')
-sample_df = df.head(100).sample(25,random_state=5)
-plt.scatter(sample_df['runs'],sample_df['avg'])
-plt.figure(figsize=(18,10))
-plt.scatter(sample_df['avg'],sample_df['strike_rate'],s=sample_df['runs'])
-
-for i in range(sample_df.shape[0]):
-  plt.text(sample_df['avg'].values[i],sample_df['strike_rate'].values[i],sample_df['batter'].values[i])
+delivery = pd.read_csv('IPL_Ball_by_Ball_2008_2022.csv')
+temp_df = delivery[(delivery['ballnumber'].isin([1,2,3,4,5,6])) & (delivery['batsman_run']==6)]
+grid = temp_df.pivot_table(index='overs',columns='ballnumber',values='batsman_run',aggfunc='count')
+plt.figure(figsize=(10,10))
+plt.imshow(grid)
+plt.yticks(delivery['overs'].unique(), list(range(1,21)))
+plt.xticks(np.arange(0,6), list(range(1,7)))
 plt.colorbar()
 plt.show()
